@@ -7,3 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
+Steps:
+sudo npm install -g @angular/cli
+ng new angular7_employee_portal
+cd angular7_employee_portal
+ng serve or npm start
+
