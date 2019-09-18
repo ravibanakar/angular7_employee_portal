@@ -1,0 +1,66 @@
+<p>employee-add works!</p>
+
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/employees']"><mat-icon>list</mat-icon></a>
+  </div>
+  <mat-card class="example-card">
+    <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Employee Id" formControlName="employee_id"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('employee_id').valid && employeeForm.get('employee_id').touched">Please enter Employee Id</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="First Name" formControlName="first_name"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('first_name').valid && employeeForm.get('first_name').touched">Please enter First Name</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Last Name" formControlName="last_name"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('last_name').valid && employeeForm.get('last_name').touched">Please enter Last Name</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Gender" formControlName="gender"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('gender').valid && employeeForm.get('gender').touched">Please enter Gender</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Date of Birth" formControlName="date_of_birth"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('date_of_birth').valid && employeeForm.get('date_of_birth').touched">Please enter Date of Birth</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Department" formControlName="department"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!employeeForm.get('department').valid && employeeForm.get('department').touched">Please enter Department</span>
+        </mat-error>
+      </mat-form-field>
+
+      <div class="button-row">
+        <button type="submit" [disabled]="!employeeForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+      </div>
+    </form>
+  </mat-card>
+</div>
