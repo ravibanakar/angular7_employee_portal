@@ -8,8 +8,8 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 
 Steps:
-sudo npm install -g @angular/cli
-ng new angular7_employee_portal
-cd angular7_employee_portal
-ng serve or npm start
+1) sudo npm install -g @angular/cli
+2) ng new angular7_employee_portal
+3) cd angular7_employee_portal
+4) ng serve or npm start
 
